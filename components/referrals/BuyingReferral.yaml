@@ -1,0 +1,70 @@
+BuyingReferral:
+  type: object
+  properties:
+    office_id:
+      type: integer
+    referral_type:
+      type: integer
+    property_type:
+      type: integer
+    bedrooms:
+      type: integer
+    vendor_title:
+      type: string
+    vendor_forename:
+      type: string
+    vendor_surname:
+      type: string
+    vendor_phone:
+      type: string
+    vendor_email:
+      type: string
+    vendor_address_name:
+      type: string
+    vendor_address_number:
+      type: integer
+    vendor_address_line1:
+      type: string
+    vendor_address_line2:
+      type: string
+    vendor_address_line3:
+      type: string
+    vendor_address_line4:
+      type: string
+    vendor_postcode:
+      type: string
+    vendor_country:
+      type: string
+    budget:
+      type: integer
+    desired_area:
+      type: string
+  required:
+    - office_id
+    - referral_type
+    - property_type
+    - vendor_title
+    - vendor_forename
+    - vendor_surname
+    - vendor_phone
+    - budget
+    - desired_area
+  example:
+    office_id: 1
+    referral_type: 2
+    budget: 210000
+    property_type: 0
+    vendor_title: "Mr"
+    vendor_forename: "Property"
+    vendor_surname: "Logic"
+    vendor_phone: "01536 510060"
+    vendor_email: "support@propertylogic.net"
+    vendor_address_name: "Unit"
+    vendor_address_number: 2
+    vendor_address_line1: "Orion Park"
+    vendor_address_line2: "Orion Way"
+    vendor_address_line3: "Kettering"
+    vendor_address_line4: "Northamptonshire"
+    vendor_address_postcode: "NN15 6PP"
+    vendor_address_country: "United Kingdom"
+    desired_area: "Kettering, Northamptonshire"

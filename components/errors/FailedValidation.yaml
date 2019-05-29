@@ -1,0 +1,4 @@
+ValidationErrors:
+      type: array
+      items:
+        type: string

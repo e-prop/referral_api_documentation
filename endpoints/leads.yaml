@@ -1,0 +1,73 @@
+openapi: 3.0.1
+
+info:
+  title: Referrals
+  description: Referral System API
+  version: "1.0"
+
+paths:
+  /leads:
+    post:
+      summary: Send a new lead into the referral system
+      tags:
+        - Leads
+      security:
+        - sigv4: []
+          api_key: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/referrals/SellingReferral.yaml'
+                - $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/referrals/BuyingReferral.yaml'
+      responses:
+        '204':
+          description: Success
+        '401':
+          description: Unauthorized
+        '422':
+          description: Validation Failed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  office_id:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  referral_type:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  property_type:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  bedrooms:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  vendor_title:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  vendor_forename:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  vendor_surname:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  vendor_phone:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  vendor_email:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  value:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  address_name:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  address_number:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  address_line1:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  address_line2:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  address_line3:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  postcode:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  country:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  budget:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+                  desired_area:
+                    $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
