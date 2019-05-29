@@ -71,3 +71,14 @@ paths:
                     $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
                   desired_area:
                     $ref: 'https://raw.githubusercontent.com/e-prop/referral_api_documentation/master/components/errors/ValidationErrors.yaml'
+components:
+  securitySchemes:
+    sigv4:
+      type: "apiKey"
+      name: "Authorization"
+      in: "header"
+      x-amazon-apigateway-authtype: "awsSigv4"
+    api_key:
+      type: "apiKey"
+      name: "x-api-key"
+      in: "header"
