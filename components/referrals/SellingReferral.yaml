@@ -19,6 +19,8 @@ SellingReferral:
       type: string
     vendor_email:
       type: string
+    vendor_address_full:
+      type: string
     vendor_address_name:
       type: string
     vendor_address_number:
@@ -37,6 +39,8 @@ SellingReferral:
       type: string
     value:
       type: integer
+    address_full:
+      type: string
     address_name:
       type: string
     address_number:
@@ -60,13 +64,7 @@ SellingReferral:
     - vendor_surname
     - vendor_phone
     - value
-    - address_name
-    - address_number
-    - address_line1
-    - address_line2
-    - address_line3
     - postcode
-    - country
   example:
     office_id: 1
     referral_type: 1
