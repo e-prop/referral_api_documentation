@@ -19,6 +19,8 @@ BuyingReferral:
       type: string
     vendor_email:
       type: string
+    vendor_address_full:
+      type: string
     vendor_address_name:
       type: string
     vendor_address_number:
